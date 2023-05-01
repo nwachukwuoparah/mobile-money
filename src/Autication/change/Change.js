@@ -4,38 +4,14 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import Logo from "./Group 46.png";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = (props) => {
+const Change = (props) => {
   const navigate = useNavigate();
 
   const formInfo = [
     {
       id: 1,
-      name: "first name",
-      label: "First Name",
-      type: "text",
-    },
-    {
-      id: 2,
-      name: "last name",
-      label: "Last Name",
-      type: "text",
-    },
-    {
-      id: 3,
       name: "email",
-      label: "Email",
-      type: "text",
-    },
-    {
-      id: 4,
-      name: "phone number",
-      label: "Phone Number",
-      type: "text",
-    },
-    {
-      id: 5,
-      name: "password",
-      label: "Password",
+      placeholder: "Enter your new password",
       type: "text",
     },
   ];
@@ -46,7 +22,7 @@ const SignUp = (props) => {
       justifyContent="center"
       alignItems="center"
       spacing={2}
-      height="180vh"
+      height="100vh"
     >
       <img
         style={{
@@ -71,8 +47,6 @@ const SignUp = (props) => {
       >
         <Typography
           variant="h5"
-          gutterBottom
-          paddingBottom={2}
           sx={{
             fontStyle: "normal",
             fontWeight: "400",
@@ -80,7 +54,7 @@ const SignUp = (props) => {
             color: "#002642",
           }}
         >
-          CREATE YOUR ACCOUNT
+         CHANGE PASSWORD
         </Typography>
         <Box
           component="div"
@@ -90,7 +64,7 @@ const SignUp = (props) => {
           gap={3}
         >
           {formInfo.map((i) => (
-            <Input key={i.id} {...i} />
+            <Input {...i} />
           ))}
         </Box>
 
@@ -98,7 +72,7 @@ const SignUp = (props) => {
           direction="column"
           justifyContent="center"
           alignItems="center"
-          spacing={3}
+          spacing={5}
           width="70%"
           //   backgroundColor="#f8f8f8"
         >
@@ -117,10 +91,10 @@ const SignUp = (props) => {
               cursor: "pointer",
             }}
           >
-            Create My Account
+            Confirm new password
           </Button>
           <Stack direction="row" spacing={0.5}>
-            <Typography>Already have an account?</Typography>
+            <Typography>Remember your password?</Typography>
             <Typography
               onClick={() => navigate("/login")}
               sx={{ color: "#E59500", cursor: "pointer" }}
@@ -134,4 +108,4 @@ const SignUp = (props) => {
   );
 };
 
-export default SignUp;
+export default Change;

@@ -1,0 +1,24 @@
+.dash_navs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: inherit;
+  /* color: #002642; */
+  color: rgba(0, 38, 66, 0.4);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.dash_navsA {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: inherit;
+  color: #002642;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+}
