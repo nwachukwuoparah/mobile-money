@@ -19,7 +19,7 @@ const Login = (props) => {
       id: 2,
       name: "password",
       label: "Password",
-      type: "text",
+      type: "password",
       forget: "Forget Password?",
     },
   ];

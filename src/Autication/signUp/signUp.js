@@ -36,7 +36,7 @@ const SignUp = (props) => {
       id: 5,
       name: "password",
       label: "Password",
-      type: "text",
+      type: "password",
     },
   ];
 
