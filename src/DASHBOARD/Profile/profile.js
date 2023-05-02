@@ -15,8 +15,8 @@ const Profile = (props) => {
         overflow: "auto",
         padding:"35px",
         backgroundColor:"rgba(217, 217, 217, 0.2)",
-        margin:"40px 0px",
-        borderRadius:"10px"
+        margin:"40px 0px 17.5px 0px",
+        borderRadius:"10px",
       }}
     >
       <Routes>

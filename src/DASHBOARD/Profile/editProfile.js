@@ -39,6 +39,8 @@ const Editprofile = (props) => {
       //   backgroundColor="rgba(217, 217, 217, 0.2)"
       borderRadius="10px"
       spacing={3}
+      margin="40px 0px 17.5px 0px"
+
     >
       <Typography variant="h5">Edit Profile</Typography>
       <Box

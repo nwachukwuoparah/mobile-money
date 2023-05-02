@@ -18,7 +18,7 @@ const Walet = (props) => {
     <Stack
       direction="column"
       alignItems="center"
-      margin="40px 0px"
+      margin="40px 0px 17.5px 0px"
       width="50%"
       backgroundColor="rgba(217, 217, 217, 0.2)"
       borderRadius="10px"

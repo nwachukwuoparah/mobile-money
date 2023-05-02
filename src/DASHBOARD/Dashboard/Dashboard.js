@@ -11,7 +11,7 @@ import {
   Icon,
 } from "@mui/material";
 import "./dashboard.css";
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../Image/Group 46.png";
 import image1 from "../Image/bro.png";
 import { NavLink } from "react-router-dom";
@@ -19,7 +19,8 @@ import { AiFillHome, AiOutlineUser } from "react-icons/ai";
 import { FaWallet } from "react-icons/fa";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { MdEditNote } from "react-icons/md";
-import { IoSettingsOutline } from "react-icons/io5";
+import { IoSettingsOutline, IoLogOutOutline } from "react-icons/io5";
+import { IoMdLock } from "react-icons/io";
 import { FaUserCircle } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 
@@ -34,6 +35,8 @@ import Editprofile from "../Profile/editProfile";
 import Transaction from "../Transaction/transaction";
 import Compliance from "../Compliance/compliance";
 const Dashboard = (props) => {
+  const [settings, Setsettings] = useState(false);
+
   const Icons = [
     {
       id: 1,
@@ -83,7 +86,7 @@ const Dashboard = (props) => {
   return (
     <Stack direction="row" height="107vh">
       <Stack
-        paddingTop={2}
+        paddingTop={5}
         direction="column"
         alignItems="center"
         width="25%"
@@ -205,6 +208,7 @@ const Dashboard = (props) => {
         <Route path="/transaction" element={<Transaction />} />
         <Route path="/compliance" element={<Compliance />} />
       </Routes>
+
       <Stack
         paddingTop={2}
         direction="column"
@@ -216,8 +220,75 @@ const Dashboard = (props) => {
           <Stack
             // backgroundColor="grey"
             direction="row-reverse"
+            paddingTop={3}
           >
-            <IoSettingsOutline fontSize={25} />
+            <IoSettingsOutline
+              onClick={() => Setsettings(!settings)}
+              fontSize={25}
+              style={{ cursor: "pointer" }}
+            />
+
+            {settings && (
+              <Stack
+                width="280px"
+                height="270px"
+                position="absolute"
+                top="90px"
+                backgroundColor="#ffff"
+                zIndex="100"
+                direction="column"
+                border="1px solid #002642"
+              >
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="center"
+                  padding="20px 0px"
+                  spacing={1}
+                  backgroundColor="#002642"
+                  color="#ffff"
+                  sx={{ cursor: "pointer" }}
+                >
+                  <IoLogOutOutline fontSize={30} />
+                  <Typography
+                    sx={{
+                      fontStyle: "normal",
+                      fontWeight: "700",
+                      fontSize: "20px",
+                      lineHeight: "36px",
+                    }}
+                  >
+                    Logout
+                  </Typography>
+                </Stack>
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="center"
+                  padding="20px 0px"
+                  spacing={1}
+                  color="#002642"
+                  sx={{
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "#f8f8f8",
+                    },
+                  }}
+                >
+                  <IoMdLock fontSize={30} />
+                  <Typography
+                    sx={{
+                      fontStyle: "normal",
+                      fontWeight: "700",
+                      fontSize: "20px",
+                      lineHeight: "36px",
+                    }}
+                  >
+                    Change Password{" "}
+                  </Typography>
+                </Stack>
+              </Stack>
+            )}
           </Stack>
 
           <Stack
