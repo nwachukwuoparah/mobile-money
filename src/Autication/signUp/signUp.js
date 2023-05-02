@@ -49,9 +49,11 @@ const SignUp = (props) => {
       height="180vh"
     >
       <img
+      onClick={() => navigate("/")}
         style={{
           marginBottom: 30,
           width: 120,
+          cursor:"pointer"
         }}
         src={Logo}
         alt="Logo"

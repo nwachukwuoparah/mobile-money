@@ -33,9 +33,11 @@ const Login = (props) => {
       height="110vh"
     >
       <img
+        onClick={() => navigate("/")}
         style={{
           marginBottom: 30,
           width: 120,
+          cursor:"pointer"
         }}
         src={Logo}
         alt="Logo"
