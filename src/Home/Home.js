@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-import HeroImage from "./image/_Downloader 1.png";
+import HeroImage from "./Image/heroImage.png";
 
 const Home = (props) => {
   const navigate = useNavigate();
@@ -13,10 +13,10 @@ const Home = (props) => {
       <Container
         sx={{
           width: "87%",
-          height: "15vh",
+          height: "13vh",
           // backgroundColor: "grey",
           display: "flex",
-          alignItems: "center",
+          alignItems: "flex-end",
           justifyContent: "space-between",
         }}
       >
@@ -66,19 +66,18 @@ const Home = (props) => {
       <Container
         sx={{
           width: "87%",
-          height: "90vh",
-          // backgroundColor: "grey",
+          height: "105vh",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
         }}
       >
-        <Stack width="50%" spacing={3}>
+        <Stack width="55%" spacing={3}>
           <Typography
             sx={{
               fontStyle: "normal",
               fontWeight: 800,
-              fontSize: "60px",
+              fontSize: "65px",
               lineHeight: "80px",
               color: "#002642",
             }}
@@ -98,7 +97,7 @@ const Home = (props) => {
             purchases.
           </Typography>
           <Button
-            endIcon={<MdKeyboardArrowRight />}
+            endIcon={<MdKeyboardArrowRight style={{width:'30px', height: '30px'}} />}
             sx={{
               width: "216px",
               height: "61px",
@@ -114,15 +113,20 @@ const Home = (props) => {
           </Button>
         </Stack>
         <Stack
-          width="50%"
+          width="45%"
+          height="80%"
           display="flex"
           alignItems="center"
           justifyContent="center"
-          // backgroundColor="grey"
+          objectFit="fill"
         >
-          <img style={{ width: "100%" }} src={HeroImage} />
+          <img style={{ width: "40rem" }} src={HeroImage} />
         </Stack>
       </Container>
+
+
+
+
 
       <Container
         sx={{
@@ -132,14 +136,6 @@ const Home = (props) => {
       >
         food
       </Container>
-      {/* <Container
-        sx={{
-          width: "87%",
-          backgroundColor: "grey",
-        }}
-      >
-        food
-      </Container> */}
     </>
   );
 };
