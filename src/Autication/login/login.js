@@ -37,7 +37,7 @@ const Login = (props) => {
         style={{
           marginBottom: 30,
           width: 120,
-          cursor:"pointer"
+          cursor: "pointer",
         }}
         src={Logo}
         alt="Logo"
@@ -87,6 +87,7 @@ const Login = (props) => {
           //   backgroundColor="#f8f8f8"
         >
           <Button
+          onClick={() => navigate("/dashboard/")}
             variant="contained"
             sx={{
               width: "100%",
